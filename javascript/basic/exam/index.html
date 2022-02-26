@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기본 문법 정리</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</head>
+<style>
+    header{
+        height:60px;
+        background-color: aqua;
+    }
+    .black-background{
+        background-color:black;
+    }
+    .brown-background{
+        background-color:brown;
+        width:300px;
+    }
+</style>
+<body>
+    
+    <!--1번 연습문제-->
+    <header></header>
+ 
+    <script>
+    /*
+    스크롤시 높이가 줄어들고 다시 스크롤 올리면 높이가 돌아오는 헤더 만들기
+    -핵심
+    1. 스크롤 감지해서 heihgt 를 변경
+    2. heihgt 값 자체만 바꾸지말고 자연스럽게 줄어들고, 스크롤 올릴때 자연스럽게 높이가 돌아오도록 구현하기
+    */
+    </script>
+
+    <!--2번 연습문제-->
+
+    <div class="black-background">
+        <div class="brown-background">
+            모달창 내용
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.black-background').addEventListener('click',function(){
+            document.querySelector('.black-background').style.display = 'none';
+        });
+        /*
+        .black-background 를 잡아채서 클릭 이벤트리스너를 걸어 style에 변경을 주는 코드
+        근데 live server로 실행해서 보면 brown-background를 클릭해도 위 코드가 실행되는데,
+        부모 태그 안에 있다보니 자식요소를 클릭해도 실행되는거지
+        근데 이러한 현상을 막아야 할 경우가 생김
+        이러한 현상을 버블링 현상이라고 함
+        .black-background 클릭했을대는 사라지지만 .brown-background 클릭했을때는 안사라지도록 코드 구현해보기
+        */
+    </script>
+
+
+    <!--3번 연습문제-->
+
+    <div class="card-group container">
+        <select class="form-control">
+            <option>-</option>
+            <option>가격순정렬</option>
+            <option>가나다순정렬</option>
+            <option>5만원이하</option>
+        </select>
+        <div class="card">
+        <img src="https://via.placeholder.com/600">
+        <div class="card-body">
+            <h5>Card title</h5>
+            <p>가격 : 70000</p>
+            <button class="btn btn-danger">주문하기</button>
+        </div>
+        </div>
+        <div class="card">
+        <img src="https://via.placeholder.com/600">
+        <div class="card-body">
+            <h5>Card title</h5>
+            <p>가격 : 70000</p>
+            <button class="btn btn-danger">주문하기</button>
+        </div>
+        </div>
+        <div class="card">
+        <img src="https://via.placeholder.com/600">
+        <div class="card-body">
+            <h5>Card title</h5>
+            <p>가격 : 70000</p>
+            <button class="btn btn-danger">주문하기</button>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        var products = [
+            { id : 0, price : 70000, title : 'Blossom Dress' },
+            { id : 1, price : 50000, title : 'Springfield Shirt' },
+            { id : 2, price : 60000, title : 'Black Monastery' }
+        ] 
+        /*
+        products 변수를 서버에서 보낸 데이터라고 일단 생각해보자.
+        1.위 html에 데이터를 바인딩 ㄱㄱ (가격 , 제목)
+        */
+    </script>
+
+    <script>
+        /*
+        2.위 select를 change 할때, 정렬되는 기능을 만들어보기
+        */
+    </script>
+</body>
+</html>
